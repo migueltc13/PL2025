@@ -1,4 +1,4 @@
-# PL - TP1
+# PL - TPC1 - Somador on/off
 
 ## Descrição
 
@@ -56,3 +56,11 @@ Este exercício demonstrou como o uso de *regex* simplifica a etapa de *parsing*
 do *input*, reduzindo a complexidade da implementação.
 
 Consulte a implementação realizada em [src/main.py](src/main.py).
+
+## Autor
+
+Realizado a 14 de Fevereiro de 2025.
+
+Miguel Torres Carvalho, a95485
+
+<img alt="Miguel Carvalho" width="20%" style="border-radius: 50%" src="https://migueltc13.github.io/images/profile.webp" />

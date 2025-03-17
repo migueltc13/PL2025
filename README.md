@@ -11,10 +11,6 @@ Processamento de Linguagens (PL), ano letivo 2024/2025.
 - [TPC4](TPC4/)
 - [TPC5](TPC5/)
 - [TPC6](TPC6/)
-- [TPC7](TPC7/)
-- [TPC8](TPC8/)
-
-## Autor
 
 Miguel Torres Carvalho, a95485
 

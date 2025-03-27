@@ -1,0 +1,288 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> comando
+Rule 1     comando -> ajuda
+Rule 2     comando -> listar
+Rule 3     comando -> moeda
+Rule 4     comando -> selecionar
+Rule 5     comando -> abastecer
+Rule 6     comando -> remover
+Rule 7     comando -> sair
+Rule 8     ajuda -> CMD_AJUDA
+Rule 9     listar -> CMD_LISTAR
+Rule 10    moeda -> CMD_MOEDA list_moedas .
+Rule 11    list_moedas -> MOEDA
+Rule 12    list_moedas -> list_moedas , MOEDA
+Rule 13    selecionar -> CMD_SELECIONAR CODIGO
+Rule 14    abastecer -> CMD_ABASTECER CODIGO QUANTIDADE
+Rule 15    abastecer -> CMD_ABASTECER CODIGO NOME QUANTIDADE PRICE
+Rule 16    remover -> CMD_REMOVER CODIGO
+Rule 17    sair -> CMD_SAIR
+
+Terminals, with rules where they appear
+
+,                    : 12
+.                    : 10
+CMD_ABASTECER        : 14 15
+CMD_AJUDA            : 8
+CMD_LISTAR           : 9
+CMD_MOEDA            : 10
+CMD_REMOVER          : 16
+CMD_SAIR             : 17
+CMD_SELECIONAR       : 13
+CODIGO               : 13 14 15 16
+MOEDA                : 11 12
+NOME                 : 15
+PRICE                : 15
+QUANTIDADE           : 14 15
+error                : 
+
+Nonterminals, with rules where they appear
+
+abastecer            : 5
+ajuda                : 1
+comando              : 0
+list_moedas          : 10 12
+listar               : 2
+moeda                : 3
+remover              : 6
+sair                 : 7
+selecionar           : 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . comando
+    (1) comando -> . ajuda
+    (2) comando -> . listar
+    (3) comando -> . moeda
+    (4) comando -> . selecionar
+    (5) comando -> . abastecer
+    (6) comando -> . remover
+    (7) comando -> . sair
+    (8) ajuda -> . CMD_AJUDA
+    (9) listar -> . CMD_LISTAR
+    (10) moeda -> . CMD_MOEDA list_moedas .
+    (13) selecionar -> . CMD_SELECIONAR CODIGO
+    (14) abastecer -> . CMD_ABASTECER CODIGO QUANTIDADE
+    (15) abastecer -> . CMD_ABASTECER CODIGO NOME QUANTIDADE PRICE
+    (16) remover -> . CMD_REMOVER CODIGO
+    (17) sair -> . CMD_SAIR
+
+    CMD_AJUDA       shift and go to state 9
+    CMD_LISTAR      shift and go to state 10
+    CMD_MOEDA       shift and go to state 11
+    CMD_SELECIONAR  shift and go to state 12
+    CMD_ABASTECER   shift and go to state 13
+    CMD_REMOVER     shift and go to state 14
+    CMD_SAIR        shift and go to state 15
+
+    comando                        shift and go to state 1
+    ajuda                          shift and go to state 2
+    listar                         shift and go to state 3
+    moeda                          shift and go to state 4
+    selecionar                     shift and go to state 5
+    abastecer                      shift and go to state 6
+    remover                        shift and go to state 7
+    sair                           shift and go to state 8
+
+state 1
+
+    (0) S' -> comando .
+
+
+
+state 2
+
+    (1) comando -> ajuda .
+
+    $end            reduce using rule 1 (comando -> ajuda .)
+
+
+state 3
+
+    (2) comando -> listar .
+
+    $end            reduce using rule 2 (comando -> listar .)
+
+
+state 4
+
+    (3) comando -> moeda .
+
+    $end            reduce using rule 3 (comando -> moeda .)
+
+
+state 5
+
+    (4) comando -> selecionar .
+
+    $end            reduce using rule 4 (comando -> selecionar .)
+
+
+state 6
+
+    (5) comando -> abastecer .
+
+    $end            reduce using rule 5 (comando -> abastecer .)
+
+
+state 7
+
+    (6) comando -> remover .
+
+    $end            reduce using rule 6 (comando -> remover .)
+
+
+state 8
+
+    (7) comando -> sair .
+
+    $end            reduce using rule 7 (comando -> sair .)
+
+
+state 9
+
+    (8) ajuda -> CMD_AJUDA .
+
+    $end            reduce using rule 8 (ajuda -> CMD_AJUDA .)
+
+
+state 10
+
+    (9) listar -> CMD_LISTAR .
+
+    $end            reduce using rule 9 (listar -> CMD_LISTAR .)
+
+
+state 11
+
+    (10) moeda -> CMD_MOEDA . list_moedas .
+    (11) list_moedas -> . MOEDA
+    (12) list_moedas -> . list_moedas , MOEDA
+
+    MOEDA           shift and go to state 17
+
+    list_moedas                    shift and go to state 16
+
+state 12
+
+    (13) selecionar -> CMD_SELECIONAR . CODIGO
+
+    CODIGO          shift and go to state 18
+
+
+state 13
+
+    (14) abastecer -> CMD_ABASTECER . CODIGO QUANTIDADE
+    (15) abastecer -> CMD_ABASTECER . CODIGO NOME QUANTIDADE PRICE
+
+    CODIGO          shift and go to state 19
+
+
+state 14
+
+    (16) remover -> CMD_REMOVER . CODIGO
+
+    CODIGO          shift and go to state 20
+
+
+state 15
+
+    (17) sair -> CMD_SAIR .
+
+    $end            reduce using rule 17 (sair -> CMD_SAIR .)
+
+
+state 16
+
+    (10) moeda -> CMD_MOEDA list_moedas . .
+    (12) list_moedas -> list_moedas . , MOEDA
+
+    .               shift and go to state 21
+    ,               shift and go to state 22
+
+
+state 17
+
+    (11) list_moedas -> MOEDA .
+
+    .               reduce using rule 11 (list_moedas -> MOEDA .)
+    ,               reduce using rule 11 (list_moedas -> MOEDA .)
+
+
+state 18
+
+    (13) selecionar -> CMD_SELECIONAR CODIGO .
+
+    $end            reduce using rule 13 (selecionar -> CMD_SELECIONAR CODIGO .)
+
+
+state 19
+
+    (14) abastecer -> CMD_ABASTECER CODIGO . QUANTIDADE
+    (15) abastecer -> CMD_ABASTECER CODIGO . NOME QUANTIDADE PRICE
+
+    QUANTIDADE      shift and go to state 23
+    NOME            shift and go to state 24
+
+
+state 20
+
+    (16) remover -> CMD_REMOVER CODIGO .
+
+    $end            reduce using rule 16 (remover -> CMD_REMOVER CODIGO .)
+
+
+state 21
+
+    (10) moeda -> CMD_MOEDA list_moedas . .
+
+    $end            reduce using rule 10 (moeda -> CMD_MOEDA list_moedas . .)
+
+
+state 22
+
+    (12) list_moedas -> list_moedas , . MOEDA
+
+    MOEDA           shift and go to state 25
+
+
+state 23
+
+    (14) abastecer -> CMD_ABASTECER CODIGO QUANTIDADE .
+
+    $end            reduce using rule 14 (abastecer -> CMD_ABASTECER CODIGO QUANTIDADE .)
+
+
+state 24
+
+    (15) abastecer -> CMD_ABASTECER CODIGO NOME . QUANTIDADE PRICE
+
+    QUANTIDADE      shift and go to state 26
+
+
+state 25
+
+    (12) list_moedas -> list_moedas , MOEDA .
+
+    .               reduce using rule 12 (list_moedas -> list_moedas , MOEDA .)
+    ,               reduce using rule 12 (list_moedas -> list_moedas , MOEDA .)
+
+
+state 26
+
+    (15) abastecer -> CMD_ABASTECER CODIGO NOME QUANTIDADE . PRICE
+
+    PRICE           shift and go to state 27
+
+
+state 27
+
+    (15) abastecer -> CMD_ABASTECER CODIGO NOME QUANTIDADE PRICE .
+
+    $end            reduce using rule 15 (abastecer -> CMD_ABASTECER CODIGO NOME QUANTIDADE PRICE .)
+

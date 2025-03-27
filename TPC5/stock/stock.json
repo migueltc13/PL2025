@@ -1,0 +1,32 @@
+[
+    {
+        "cod": "A23",
+        "nome": "Água 0.5L",
+        "quant": 17,
+        "preco": 0.7
+    },
+    {
+        "cod": "B45",
+        "nome": "Refrigerante 1L",
+        "quant": 15,
+        "preco": 1.5
+    },
+    {
+        "cod": "C67",
+        "nome": "Sumo 330ml",
+        "quant": 10,
+        "preco": 1.2
+    },
+    {
+        "cod": "D89",
+        "nome": "Cerveja 330ml",
+        "quant": 20,
+        "preco": 1.0
+    },
+    {
+        "cod": "A99",
+        "nome": "Café",
+        "quant": 4,
+        "preco": 0.7
+    }
+]
